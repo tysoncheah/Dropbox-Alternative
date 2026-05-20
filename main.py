@@ -11,7 +11,7 @@ from cloudevents.http import CloudEvent
 storage_client = storage.Client()
 
 # Target bucket for downsized previews (passed via Environment Variables)
-PREVIEW_BUCKET_NAME = os.environ.get("PREVIEW_BUCKET")
+PREVIEW_BUCKET_NAME = "preview-gallery"
 
 @functions_framework.cloud_event
 def process_av_upload(cloud_event: CloudEvent) -> None:
