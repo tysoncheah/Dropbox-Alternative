@@ -9,7 +9,7 @@ from PIL import Image
 storage_client = storage.Client()
 
 # Target bucket for downsized previews (passed via Environment Variables)
-PREVIEW_BUCKET_NAME = os.environ.get("PREVIEW_BUCKET")
+PREVIEW_BUCKET_NAME = "preview-gallery" # your preview bucket name here
 
 def process_av_upload(event, context):
     bucket_name = event['bucket']
